@@ -22,19 +22,24 @@ function frogLeave() {
 
 function dragEnter(event) {
   event.preventDefault();
+  this.classList.add("droppable-hover");
 }
 
 function dragOver(event) {
   event.preventDefault();
+  if (event.touches) {
+        // Handle touch move events
+        // May need to update the logic here to ensure it works as expected with touch interactions
+    }
 }
-/*
+
 function dropBox() {
-  if (draggedFrog) {
-    this.append(draggedFrog);  // Append the dragged frog to the lilypad
-    sound.play();
-  }
-} */
-function dropBox() {
+    event.preventDefault();
+
+    if (event.touches) {
+        // Handle touch end events
+        // You may need to update the logic here to ensure it works as expected with touch interactions
+    }
     if (draggedFrog) {
         const frogNumberWord = draggedFrog.querySelector('.displayWord').textContent;
         const lilypadNumber = this.querySelector('.displayWord').textContent;
@@ -54,6 +59,9 @@ function dropBox() {
 frogs.forEach(frog => {
   frog.addEventListener("dragstart", frogEnter);
   frog.addEventListener("dragend", frogLeave);
+  // Add touch event listeners
+  frog.addEventListener("touchstart", frogEnter);
+  frog.addEventListener("touchend", frogLeave);
 });
 
 // Add event listeners to each lilypad
@@ -61,6 +69,10 @@ lilypads.forEach(lilypad => {
   lilypad.addEventListener("dragenter", dragEnter);
   lilypad.addEventListener("dragover", dragOver);
   lilypad.addEventListener("drop", dropBox);
+  // Add touch event listeners
+  lilypad.addEventListener("touchenter", dragEnter);
+  lilypad.addEventListener("touchmove", dragOver, { passive: false });  // Set passive to false to prevent scrolling while dragging
+  lilypad.addEventListener("touchend", dropBox);
 });
 
 
