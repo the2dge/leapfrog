@@ -113,7 +113,9 @@
 	transform: rotate(-45deg);
 }
 
+
 /* Styles for screens with a maximum width of 500px */
+
 @media (max-width: 500px) {
   .navbar {
     height: 10%;
@@ -126,12 +128,8 @@
 	justify-content: space-between;
 	background-color: #baaa99;
 	width: 100vw;
-  height: 40vh;
 }
-.pond{
-	background-color: #4488e0;
-	height: 60vh;
-}
+
 .frog, .lilypadGreen ,.lilypad{
   position: relative;
   width: 20vh;
@@ -159,5 +157,8 @@
 	font-size: 1rem;
 	background-image: url("assets/lilypad.svg");
 }
-
+.pond{
+	background-color: #4488e0;
+  width: 100vw;
+}
 }
