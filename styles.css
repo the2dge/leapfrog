@@ -21,6 +21,7 @@
 .playground{
 	display: flex;
 	flex-wrap: wrap;
+	min-height: 90vh;
 }
 .balloon {
   display:none;
@@ -51,14 +52,17 @@
 	align-items: center;
 	justify-content: space-between;
 	background-color: #baaa99;
-	min-width: 370px;
+	min-width: 250px;
 	width: 40vw;
-  min-height: 90vh;
 }
 .pond{
-    width: 60vw;
-	background-color: #4488e0;
-
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4488e0;
+  flex-grow: 1;/* This makes the .pond div take up the remaining space */
 }
 .frog, .lilypadGreen ,.lilypad{
   position: relative;
@@ -110,7 +114,7 @@
 }
 
 /* Styles for screens with a maximum width of 500px */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .navbar {
     height: 10%;
   }
