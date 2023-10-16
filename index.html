@@ -6,6 +6,10 @@
 	<title>Leap Frog</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="stylesheet" type="text/css" href="animation.css">
+	
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css">
+
 </head>
 <body>
 <main>
@@ -15,10 +19,10 @@
 	</div>
 </header>
 <section class="playground">
-   <div class="land">
+   <div class="land" id="land">
    	 <div class="frog animated pulse infinite" draggable="true"><span class="displayWord">ONE</span></div>
      <div class="frog animated pulse infinite" draggable="true"><span class="displayWord">TWO</span></div>
-   	 <div class="frog" draggable="true"><span class="displayWord">THREE</span></div>
+   	 <div class="frog animated pulse infinite" draggable="true"><span class="displayWord">THREE</span></div>
    	 <div class="frog animated pulse infinite" draggable="true"><span class="displayWord">FOUR</span></div>
    	 <div class="frog animated pulse infinite" draggable="true"><span class="displayWord">FIVE</span></div>
    	 <div class="frog animated pulse infinite" draggable="true"><span class="displayWord">SIX</span></div>
@@ -27,22 +31,25 @@
    	 <div class="frog animated pulse infinite" draggable="true"><span class="displayWord">NINE</span></div>
    	 <div class="frog animated pulse infinite" draggable="true"><span class="displayWord">TEN</span></div>
    </div>
-   <div class="pond">
-   	 <div class="lilypad"><span class="displayWord">1</span></div>
-   	 <div class="lilypad"><span class="displayWord">2</span></div>
-   	 <div class="lilypad"><span class="displayWord">3</span></div>
-   	 <div class="lilypad rotate"><span class="displayWord antiRotate">4</span></div>
-   	 <div class="lilypad"><span class="displayWord">5</span></div>
-   	 <div class="lilypad"><span class="displayWord">6</span></div>
-   	 <div class="lilypad"><span class="displayWord">7</span></div>
-   	 <div class="lilypad"><span class="displayWord">8</span></div>
-   	 <div class="lilypad"><span class="displayWord">9</span></div>
-   	 <div class="lilypad"><span class="displayWord">10</span></div>
+   <div class="pond" id="pond">
+   	
+   	 <div class="lilypad" id="lilypad-1"><span class="displayNum">1</span></div>
+   	 <div class="lilypad" id="lilypad-2"><span class="displayNum ">2</span></div>
+   	 <div class="lilypad" id="lilypad-3"><span class="displayNum ">3</span></div>
+   	 <div class="lilypad" id="lilypad-4"><span class="displayNum ">4</span></div>
+   	 <div class="lilypad" id="lilypad-5"><span class="displayNum">5</span></div>
+   	 <div class="lilypad" id="lilypad-6"><span class="displayNum">6</span></div>
+   	 <div class="lilypad" id="lilypad-7"><span class="displayNum">7</span></div>
+   	 <div class="lilypad" id="lilypad-8"><span class="displayNum">8</span></div>
+   	 <div class="lilypad" id="lilypad-9"><span class="displayNum">9</span></div>
+   	 <div class="lilypad" id="lilypad-10"><span class="displayNum">10</span></div>
+   	
    </div>
 
    <div class="balloon"></div>
 </section>
 </main>
-<script src="app1.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
