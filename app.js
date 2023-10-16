@@ -17,7 +17,9 @@ const lilypads = [
     document.getElementById("lilypad-9"),
     document.getElementById("lilypad-10"),
 ];
-
+document.getElementById('land').addEventListener('touchmove', function(e) {
+    e.preventDefault();
+}, { passive: false }); 
 function isLilypadOccupied(lilypad) {
   return lilypad.dataset.occupied === 'true';
 }
