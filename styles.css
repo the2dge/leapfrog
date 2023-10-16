@@ -43,27 +43,7 @@
   0%,100%{ transform:translateY(0) rotate(-4deg); }
   50%{ transform:translateY(-25px) rotate(4deg); }
 }
-.balloon:before {
-  content:"▲";
-  font-size:20px;
-  color:hsl(015,30%,50%);
-  display:block;
-  text-align:center;
-  width:100%;
-  position:absolute;
-  bottom:-12px;
-  z-index:-100;
-}
 
-.balloon:after {
-  display:inline-block; top:153px; left: 56px;
-  position:absolute;
-  height:250px;
-  width:1px;
-  margin:0 auto;
-  content:"";
-  background:rgba(0,0,0,0.2); 
-}
 .land, .pond{
 	position: relative;
 	display: flex;
@@ -73,7 +53,7 @@
 	background-color: #baaa99;
 	min-width: 370px;
 	width: 40vw;
-	min-height: 90vh;
+  min-height: 90vh;
 }
 .pond{
     width: 60vw;
@@ -129,3 +109,51 @@
 	transform: rotate(-45deg);
 }
 
+/* Styles for screens with a maximum width of 500px */
+@media (max-width: 600px) {
+  .navbar {
+    height: 10%;
+  }
+.land, .pond{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #baaa99;
+	width: 100vw;
+  height: 40vh;
+}
+.pond{
+	background-color: #4488e0;
+	height: 60vh;
+}
+.frog, .lilypadGreen ,.lilypad{
+  position: relative;
+  width: 20vh;
+  height: 20vh;
+  margin:5px;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("assets/frog-green.svg");
+}
+.frog{
+	postion: absolute;
+	top:0;
+	left:0;
+}
+
+.lilypad:nth-child(3), .lilypad:nth-child(7){
+	background-image: url("assets/lilypad-green.svg");
+}
+.lilypad{
+	position: relative;
+	width: 16vh;
+	height: 16vh;
+	margin:7px;
+	font-size: 1rem;
+	background-image: url("assets/lilypad.svg");
+}
+
+}
