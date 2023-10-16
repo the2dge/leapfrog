@@ -17,9 +17,7 @@ const lilypads = [
     document.getElementById("lilypad-9"),
     document.getElementById("lilypad-10"),
 ];
-document.getElementById('land').addEventListener('touchmove', function(e) {
-    e.preventDefault();
-}, { passive: false }); 
+
 function isLilypadOccupied(lilypad) {
   return lilypad.dataset.occupied === 'true';
 }
@@ -52,6 +50,11 @@ dragula([
     setLilypadOccupied(source, false);  // If the frog is moved off a lilypad, mark the lilypad as unoccupied
   }
 });
+// Add the touchmove event listener after initializing Dragula
+document.getElementById('land').addEventListener('touchmove', function(e) {
+    e.preventDefault();
+}, { passive: false });
+
 // Helper function to update the score
 function updateScore(amount) {
     const scoreboard = document.querySelector('.scoreboard span');
