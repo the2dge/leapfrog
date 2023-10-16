@@ -6,7 +6,7 @@
 	display: flex;
 	width: 100%;
 	height: 10vh;
-	background-color: #101010;
+	background-color: #202020;
 	align-items: center;
 	justify-content: center;
 }
@@ -95,6 +95,7 @@
 	top:0;
 	left:0;
 }
+
 .lilypad:nth-child(3), .lilypad:nth-child(7){
 	background-image: url("assets/lilypad-green.svg");
 }
@@ -106,12 +107,20 @@
 	font-size: 1.3rem;
 	background-image: url("assets/lilypad.svg");
 }
+
 .displayWord{
 	position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -0%);
-    text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  text-align: center;
+}
+.displayNum{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  text-align: center;
 }
 .rotate{
 	transform: rotate(45deg);
